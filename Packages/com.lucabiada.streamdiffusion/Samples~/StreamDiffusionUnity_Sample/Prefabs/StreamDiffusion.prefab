@@ -1,0 +1,175 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7248877364076513475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5029844522600831974}
+  - component: {fileID: 61278625327961309}
+  - component: {fileID: 8024384170278502085}
+  - component: {fileID: 542637688283607947}
+  - component: {fileID: 3928424591800815833}
+  m_Layer: 0
+  m_Name: StreamDiffusion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5029844522600831974
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7248877364076513475}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &61278625327961309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7248877364076513475}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ab4663240be5134e9fc7b927865f6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: StreamDiffusion.Runtime::StreamDiffusion.TestPatternSource
+  size: 512
+--- !u!114 &8024384170278502085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7248877364076513475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd59aaecfea041d47aa1217dd62d0537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: StreamDiffusion.Runtime::StreamDiffusion.DiffusionController
+  autoStart: 0
+  autoInstallIfMissing: 0
+  applyCommandLine: 1
+  engineBuildPolicy: 0
+  logToConsole: 1
+  logServerOutput: 0
+  host: 127.0.0.1
+  port: 8765
+  token: 
+  launchLocalServer: 1
+  basefolder: 
+  allowBootstrapDownloads: 0
+  width: 512
+  height: 512
+  syncReadback: 1
+  maxSendFps: 60
+  flipY: 1
+  sourceMode: 0
+  sourceTexture: {fileID: 8400000, guid: fb95da20f67ff764086d8e43fe4c6d27, type: 2}
+  sourceCamera: {fileID: 0}
+  modelId: stabilityai/sdxl-turbo
+  acceleration: tensorrt
+  useTinyVae: 1
+  mode: 0
+  cfgType: 0
+  scheduler: 0
+  sampler: 0
+  fxPre: []
+  fxPost: []
+  fixGpuTimeoutDuringInstall: 1
+  useIpAdapter: 0
+  ipAdapterModel: h94/IP-Adapter/sdxl_models/ip-adapter_sdxl.bin
+  ipAdapterEncoder: h94/IP-Adapter/sdxl_models/image_encoder
+  ipAdapterScale: 0.7
+  ipAdapterEnabled: 1
+  referenceTexture: {fileID: 2800000, guid: 2f75d88d4662e9945ba37ad7eff5b97c, type: 3}
+  referenceRefreshSeconds: 0
+  controlNets: []
+  controlSource: 1
+  controlTexture: {fileID: 8400000, guid: 6ffa7c6191d796e468b4c7e7bcceac68, type: 2}
+  showControlMap: 0
+  loras: []
+  useStreamV2V: 0
+  featureInjection: 1
+  v2vMaxCacheFrames: 4
+  fiStrength: 0.75
+  fiThreshold: 0.98
+  v2vCacheInterval: 1
+  v2vCacheFrames: 4
+  negativePrompt: 
+  guidanceScale: 1
+  delta: 1
+  numInferenceSteps: 50
+  stepSchedule: 01000000i
+  promptBlend:
+  - text: bubbling neurons
+    weight: 1
+  promptInterpolation: 0
+  normalizePromptWeights: 1
+  seedBlend:
+  - seed: 2416333
+    weight: 1
+  seedInterpolation: 1
+  normalizeSeedWeights: 1
+  ndiOutputEnabled: 0
+  ndiOutputName: StreamDiffusionUnity
+  similarFilterEnabled: 0
+  similarFilterThreshold: 0.98
+  similarFilterMaxSkip: 10
+  addNoise: 1
+--- !u!114 &542637688283607947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7248877364076513475}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a34b5b50f1c69df4a93d260f195c6c21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: StreamDiffusion.Runtime::StreamDiffusion.DiffusionQuickStart
+  pattern: {fileID: 61278625327961309}
+  showPreview: 0
+--- !u!114 &3928424591800815833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7248877364076513475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef0b9dfb34e18fb418a04a26632684ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: StreamDiffusion.UI::StreamDiffusion.UI.DiffusionPanel
+  showStream: 1
+  showPerformance: 1
+  showModel: 1
+  showNdi: 1
+  showFx: 1
+  showPresets: 1
+  showEnvironment: 1
+  showAbout: 1
+  startPage: 0
+  showHeader: 1
+  titleText: StreamDiffusionUnity
+  showOutput: 1
+  showInputPreview: 1
+  showHideButton: 1
+  startHidden: 0
+  showConsole: 1
+  openConsoleAtStart: 0

@@ -1,0 +1,25 @@
+# Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+MemoryCaptures/
+*.csproj
+*.sln
+*.suo
+*.user
+*.pidb
+*.pdb
+.vs/
+.vscode/
+.idea/
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+# OS
+.DS_Store
+Thumbs.db

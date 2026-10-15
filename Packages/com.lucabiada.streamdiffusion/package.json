@@ -1,0 +1,32 @@
+{
+  "name": "com.lucabiada.streamdiffusion",
+  "version": "0.1.0",
+  "displayName": "StreamDiffusionUnity",
+  "description": "Interactive realtime image generation (StreamDiffusion) controlled from Unity: runtime component and UI, installer, Python server (WebSocket control + shared-memory video + NDI out). Works in the Editor and in an exported Windows build.",
+  "unity": "6000.6",
+  "documentationUrl": "https://github.com/LucaBiada/StreamDiffusionUnity",
+  "dependencies": {
+    "com.unity.render-pipelines.universal": "17.6.0",
+    "com.unity.nuget.newtonsoft-json": "3.2.2",
+    "com.unity.modules.ui": "1.0.0",
+    "com.unity.modules.uielements": "1.0.0",
+    "com.unity.modules.unitywebrequest": "1.0.0",
+    "com.unity.modules.imageconversion": "1.0.0"
+  },
+  "keywords": [
+    "streamdiffusion",
+    "diffusion",
+    "ai",
+    "realtime",
+    "generative",
+    "ndi",
+    "urp"
+  ],
+  "samples": [
+    {
+      "displayName": "StreamDiffusionUnity sample scene",
+      "description": "A scene with animated spheres as the input, a depth-map camera for ControlNet, and the StreamDiffusion panel ready to use.",
+      "path": "Samples~/StreamDiffusionUnity_Sample"
+    }
+  ]
+}

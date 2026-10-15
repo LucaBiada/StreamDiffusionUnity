@@ -1,0 +1,5 @@
+# Server-only dependencies, installed into the StreamDiffusion venv on top of the pinned
+# environment (see ../reference/sdunity-venv-freeze.txt for the base).
+websockets>=14
+# NDI output (needs the free NDI Runtime from ndi.video installed on the machine)
+cyndilib>=0.1.3

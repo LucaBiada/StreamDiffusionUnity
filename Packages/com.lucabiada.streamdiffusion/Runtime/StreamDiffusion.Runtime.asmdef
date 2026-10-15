@@ -1,0 +1,13 @@
+{
+    "name": "StreamDiffusion.Runtime",
+    "rootNamespace": "StreamDiffusion",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

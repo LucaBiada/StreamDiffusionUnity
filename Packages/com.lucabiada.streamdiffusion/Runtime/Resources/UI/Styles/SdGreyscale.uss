@@ -1,0 +1,74 @@
+/* Neutral greyscale surfaces for the StreamDiffusion panel (loaded after the design system's tokens).
+   Only backgrounds, borders and text are changed; the accent colours (primary, secondary, warning,
+   danger) keep the design system's values. */
+:root {
+    --color-text-primary:   #ECECEC;
+    --color-text-secondary: #A8A8A8;
+    --color-text-disabled:  #6E6E6E;
+    --color-text-on-accent: #FFFFFF;
+
+    --color-bg:             #0F0F0F;
+    --color-surface:        #171717;
+    --color-surface-elev:   #1F1F1F;
+    --color-surface-hover:  #282828;
+    --color-border:         #2A2A2A;
+    --color-border-strong:  #3A3A3A;
+
+    /* primary (buttons, active tab) */
+    --color-primary:       #378EF0;
+    --color-primary-hover: #4C9BF3;
+    --color-primary-press: #2D7BD8;
+    --color-primary-soft:  rgba(55, 142, 240, 0.16);
+
+    /* secondary (secondary buttons): same blue as primary */
+    --color-secondary:       #378EF0;
+    --color-secondary-hover: #4C9BF3;
+    --color-secondary-press: #2D7BD8;
+    --color-secondary-soft:  rgba(55, 142, 240, 0.20);
+}
+
+/* secondary buttons: outlined */
+.ds-btn--secondary {
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--color-secondary);
+    border-width: 1px;
+    border-color: var(--color-secondary);
+}
+.ds-btn--secondary:hover {
+    background-color: var(--color-secondary-soft);
+    border-color: var(--color-secondary-hover);
+    color: var(--color-secondary-hover);
+}
+.ds-btn--secondary:active,
+.ds-btn--secondary.ds-btn--pressed {
+    background-color: var(--color-secondary-soft);
+    border-color: var(--color-secondary-press);
+    color: var(--color-secondary-press);
+}
+.ds-btn--secondary:disabled {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: var(--color-border-strong);
+    color: var(--color-text-disabled);
+}
+
+/* ---- layout surfaces: everything is solid except the title band, which is a 75% black, blurred glass strip
+   over the scene (the page root itself stays transparent so the camera shows behind the band) ---- */
+.ds-root {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.sd-header {
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(14px);
+}
+
+.sd-page {
+    background-color: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(80px) grayscale(100%) contrast(70%);
+}
+
+/* console strip and dock: completely opaque */
+.sd-solid {
+    background-color: rgb(20, 20, 20);
+    backdrop-filter: none;
+}
